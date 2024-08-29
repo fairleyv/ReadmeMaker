@@ -1,6 +1,6 @@
 import React from "react"
-import {useState} from "react"
+import logo from "../src/assets/readmeMakerLogo.jpg"
 
 export default function Navbar () {
-    return 
+    return <h1>hello</h1>
 }
