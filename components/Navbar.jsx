@@ -1,7 +1,21 @@
 import React from "react"
 import logo from "../src/assets/readmeMakerLogo.jpg"
+import {useState} from "react"
 
 export default function Navbar () {
+
+const [isActive, setIsActive] = useState(false)
+
+function mobileMenu () {
+    setIsActive(prevState => !prevState)
+}
+
+function closeMenu () {
+    setIsActive (prevState => !prevState)
+}
+
+const activeClass = isActive ? "active" : ""
+
     return (
     <nav className="navbar">
         <div className="navbar--title--section">
@@ -9,13 +23,25 @@ export default function Navbar () {
             <h1 className="navbar--title">Readme Maker</h1>
         </div>
 
-        <div className="navbar--links--section">
-            <h3 className="navbar--link"><a href="#">How To Use</a></h3>
-            <h3 className="navbar--link"><a href="#">ReadMe Maker</a></h3>
-            <h3 className="navbar--link"><a href="#">Download Button</a></h3>
-            <h3 className="navbar--link"><a href="#">Footer</a></h3>
+        <ul className={`navbar--menu ${activeClass}`}>
+                <li className="navbar--item">
+                    <a href="#" className="navbar--link" onClick={closeMenu}>How To Use</a>
+                </li>
+                <li className="navbar--item">
+                    <a href="#" className="navbar--link" onClick={closeMenu}>Readme Maker</a>
+                </li>
+                <li className="navbar--item">
+                    <a href="#" className="navbar--link" onClick={closeMenu}>Download Button</a>
+                </li>
+                <li className="navbar--item">
+                    <a href="#" className="navbar--link" onClick={closeMenu}>Footer</a>
+                </li>
+            </ul>
+        <div className={`hamburger ${activeClass}`} onClick={mobileMenu}>
+            <span className="bar"></span>
+            <span className="bar"></span>
+            <span className="bar"></span>
         </div>
-
     </nav>
     )
 }
