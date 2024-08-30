@@ -1,7 +1,21 @@
 import React from "react"
 import logo from "../src/assets/readmeMakerLogo.jpg"
+import {useState} from "react"
 
 export default function Navbar () {
+
+const [isActive, setIsActive] = useState(false)
+
+function mobileMenu () {
+    setIsActive(prevState => !prevState)
+}
+
+function closeMenu () {
+    setIsActive (prevState => !prevState)
+}
+
+const activeClass = isActive ? "active" : ""
+
     return (
     <nav className="navbar">
         <div className="navbar--title--section">
@@ -9,21 +23,21 @@ export default function Navbar () {
             <h1 className="navbar--title">Readme Maker</h1>
         </div>
 
-        <ul class="navbar--menu">
-                <li class="navbar--item">
-                    <a href="#" className="navbar--link">How To Use</a>
+        <ul className={`navbar--menu ${activeClass}`}>
+                <li className="navbar--item">
+                    <a href="#" className="navbar--link" onClick={closeMenu}>How To Use</a>
                 </li>
-                <li class="navbar--item">
-                    <a href="#" className="navbar--link">Readme Maker</a>
+                <li className="navbar--item">
+                    <a href="#" className="navbar--link" onClick={closeMenu}>Readme Maker</a>
                 </li>
-                <li class="navbar--item">
-                    <a href="#" className="navbar--link">Download Button</a>
+                <li className="navbar--item">
+                    <a href="#" className="navbar--link" onClick={closeMenu}>Download Button</a>
                 </li>
-                <li class="navbar--item">
-                    <a href="#" className="navbar--link">Footer</a>
+                <li className="navbar--item">
+                    <a href="#" className="navbar--link" onClick={closeMenu}>Footer</a>
                 </li>
             </ul>
-        <div className="hamburger">
+        <div className={`hamburger ${activeClass}`} onClick={mobileMenu}>
             <span className="bar"></span>
             <span className="bar"></span>
             <span className="bar"></span>
