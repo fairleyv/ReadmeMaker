@@ -107,89 +107,92 @@ export default function ReadmeForm () {
 
 
     return (
-        <form onSubmit={handleSubmit}>
-            <input
-                type="text"
-                placeholder="Project Title"
-                onChange={handleChange}
-                name="title"
-                value={formData.title}
-            />
-            <textarea 
-                type="text"
-                placeholder="Description"
-                onChange={handleChange}
-                name="description"
-                value={formData.description}
-            />
-            <label htmlFor="tableOfContents">Include a Table of Contents?</label>
-            <input 
-                type="checkbox"
-                id="tableOfContents"
-                onChange={handleChange}
-                name="includeTableofContents"
-                checked={formData.includeTableofContents}
-            />
-            <textarea 
-                type="text"
-                placeholder="Installation"
-                onChange={handleChange}
-                name="installation"
-                value={formData.installation}
-            />
-            <textarea 
-                type="text"
-                placeholder="Usage"
-                onChange={handleChange}
-                name="usage"
-                value={formData.usage}
-            />
-            <textarea 
-                type="text"
-                placeholder="Credits"
-                onChange={handleChange}
-                name="credits"
-                value={formData.credits}
-            />
-            <label htmlFor="license">What license would you Like?</label>
-            <select id="license"
-                onChange={handleChange}
-                name="license"
-                value={formData.license}
-            >
-                <option value="N/A">N/A</option>
-                <option value="Apache_2.0">Apache_2.0</option>
-                <option value="BSD_3--Clause">BSD_3--Clause</option>
-                <option value="GPLv3">GPLv3</option>
-                <option value="GPL_v2">GPL_v2</option>
-                <option value="IPL_1.0">IPL_1.0</option>
-                <option value="ISC">ISC</option>
-                <option value="MIT">MIT</option>
-                
+        <div className="readme--container">
 
-            </select>
-            <textarea 
-                type="text"
-                placeholder="Tests"
-                onChange={handleChange}
-                name="tests"
-                value={formData.tests}
-            />
-            <input
-                type="email"
-                placeholder="Email"
-                onChange={handleChange}
-                name="email"
-                value={formData.email}
-            />
-            <input
-                type="text"
-                placeholder="Github Username"
-                onChange={handleChange}
-                name="githubUsername"
-                value={formData.githubUsername}
-            />
-            <button>Create Readme</button>
-        </form>
+            <form onSubmit={handleSubmit}> 
+                <input
+                    type="text"
+                    placeholder="Project Title"
+                    onChange={handleChange}
+                    name="title"
+                    value={formData.title}
+                />
+                <textarea 
+                    type="text"
+                    placeholder="Description"
+                    onChange={handleChange}
+                    name="description"
+                    value={formData.description}
+                />
+                <label htmlFor="tableOfContents">Include a Table of Contents?</label>
+                <input 
+                    type="checkbox"
+                    id="tableOfContents"
+                    onChange={handleChange}
+                    name="includeTableofContents"
+                    checked={formData.includeTableofContents}
+                />
+                <textarea 
+                    type="text"
+                    placeholder="Installation"
+                    onChange={handleChange}
+                    name="installation"
+                    value={formData.installation}
+                />
+                <textarea 
+                    type="text"
+                    placeholder="Usage"
+                    onChange={handleChange}
+                    name="usage"
+                    value={formData.usage}
+                />
+                <textarea 
+                    type="text"
+                    placeholder="Credits"
+                    onChange={handleChange}
+                    name="credits"
+                    value={formData.credits}
+                />
+                <label htmlFor="license">What license would you Like?</label>
+                <select id="license"
+                    onChange={handleChange}
+                    name="license"
+                    value={formData.license}
+                >
+                    <option value="N/A">N/A</option>
+                    <option value="Apache_2.0">Apache_2.0</option>
+                    <option value="BSD_3--Clause">BSD_3--Clause</option>
+                    <option value="GPLv3">GPLv3</option>
+                    <option value="GPL_v2">GPL_v2</option>
+                    <option value="IPL_1.0">IPL_1.0</option>
+                    <option value="ISC">ISC</option>
+                    <option value="MIT">MIT</option>
+                    
+
+                </select>
+                <textarea 
+                    type="text"
+                    placeholder="Tests"
+                    onChange={handleChange}
+                    name="tests"
+                    value={formData.tests}
+                />
+                <input
+                    type="email"
+                    placeholder="Email"
+                    onChange={handleChange}
+                    name="email"
+                    value={formData.email}
+                />
+                <input
+                    type="text"
+                    placeholder="Github Username"
+                    onChange={handleChange}
+                    name="githubUsername"
+                    value={formData.githubUsername}
+                />
+                <button>Create Readme</button>
+            </form>
+        </div>
     )
 }
