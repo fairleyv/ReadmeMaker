@@ -19,12 +19,20 @@ export default function ReadmeForm () {
         } 
     )
 
+
     function handleChange (event) {
         const {name, value, type, checked} = event.target
         setFormData(prevFormData => ({
             ...prevFormData,
             [name]: type === "checkbox" ? checked : value
         }))
+    }
+
+    function handleSubmit (event) {
+        event.preventDefault()
+        renderLicenseBadge()
+        renderLicenseLink()
+        console.log(formData)
     }
 
 
@@ -42,11 +50,12 @@ export default function ReadmeForm () {
         } else {
             setFormData(prevFormData => ({
                 ...prevFormData,
-                licenseBadge: `[![License](https://img.shields.io/badge/License-${license}-blue.svg)]`
+                licenseBadge: `[![License](https://img.shields.io/badge/License-${formData.license}-blue.svg)]`
               }))
         }
+    }
 
-    function renderLicenseLinklicense () {
+    function renderLicenseLink() {
         if (formData.license == 'N/A') {
           setFormData(prevFormData => ({
             ...prevFormData,
@@ -55,7 +64,7 @@ export default function ReadmeForm () {
         } else if (formData.license == 'Apache_2.0') {
             setFormData(prevFormData => ({
                 ...prevFormData,
-                licenseLink: `(https://opensource.org/licenses/Apache-2.0)`
+                licenseLink: "(https://opensource.org/licenses/Apache-2.0)"
               }))
         }
       
@@ -95,11 +104,10 @@ export default function ReadmeForm () {
               }))
         }
       }
-    }
 
 
     return (
-        <form>
+        <form onSubmit={handleSubmit}>
             <input
                 type="text"
                 placeholder="Project Title"
@@ -168,7 +176,7 @@ export default function ReadmeForm () {
                 value={formData.tests}
             />
             <input
-                type="text"
+                type="email"
                 placeholder="Email"
                 onChange={handleChange}
                 name="email"
@@ -181,6 +189,7 @@ export default function ReadmeForm () {
                 name="githubUsername"
                 value={formData.githubUsername}
             />
+            <button>Create Readme</button>
         </form>
     )
 }
