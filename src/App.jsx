@@ -7,6 +7,7 @@ import ReadmeMarkup from "../components/ReadmeMarkup"
 import Footer from "../components/Footer"
 
 function App() {
+    return (
     <>
         <Navbar />
         <HowtoUse />
@@ -17,6 +18,7 @@ function App() {
         <DownloadButton />
         <Footer />
     </>
+    )
 
   
 }
