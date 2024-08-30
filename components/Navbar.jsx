@@ -9,13 +9,25 @@ export default function Navbar () {
             <h1 className="navbar--title">Readme Maker</h1>
         </div>
 
-        <div className="navbar--links--section">
-            <h3 className="navbar--link"><a href="#">How To Use</a></h3>
-            <h3 className="navbar--link"><a href="#">ReadMe Maker</a></h3>
-            <h3 className="navbar--link"><a href="#">Download Button</a></h3>
-            <h3 className="navbar--link"><a href="#">Footer</a></h3>
+        <ul class="navbar--menu">
+                <li class="navbar--item">
+                    <a href="#" className="navbar--link">How To Use</a>
+                </li>
+                <li class="navbar--item">
+                    <a href="#" className="navbar--link">Readme Maker</a>
+                </li>
+                <li class="navbar--item">
+                    <a href="#" className="navbar--link">Download Button</a>
+                </li>
+                <li class="navbar--item">
+                    <a href="#" className="navbar--link">Footer</a>
+                </li>
+            </ul>
+        <div className="hamburger">
+            <span className="bar"></span>
+            <span className="bar"></span>
+            <span className="bar"></span>
         </div>
-
     </nav>
     )
 }
