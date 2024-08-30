@@ -52,14 +52,14 @@
     margin: 5px auto;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    background-color: #101010;
+    background-color: #fff;
 }
 
 @media only screen and (max-width: 768px) {
     .navbar--menu {
         position: fixed;
         left: -100%;
-        top: 5rem;
+        top: 7rem;
         flex-direction: column;
         background-color: #fff;
         width: 100%;
