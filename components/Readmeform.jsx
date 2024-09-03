@@ -1,5 +1,6 @@
 import React from "react"
 import {useState} from "react"
+import ReadmeMarkup from "./ReadmeMarkup.jsx";
 
 export default function ReadmeForm () {
     const [formData, setFormData] = useState(
@@ -193,6 +194,8 @@ export default function ReadmeForm () {
                 />
                 <button>Create Readme</button>
             </form>
+
+            <ReadmeMarkup />
         </div>
     )
 }
