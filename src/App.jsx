@@ -1,9 +1,8 @@
 import './App.css'
 import Navbar from "../components/Navbar"
 import HowtoUse from "../components/HowtoUse"
-import ReadmeForm from "../components/ReadmeForm"
+import ReadmeForm from "../components/Readmeform"
 import DownloadButton from "../components/DownloadButton"
-import ReadmeMarkup from "../components/ReadmeMarkup"
 import Footer from "../components/Footer"
 
 function App() {
@@ -11,10 +10,7 @@ function App() {
     <>
         <Navbar />
         <HowtoUse />
-        <div className="readme--output">
-            <ReadmeForm />
-            <ReadmeMarkup />
-        </div>
+        <ReadmeForm />
         <DownloadButton />
         <Footer />
     </>
