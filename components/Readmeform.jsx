@@ -111,16 +111,16 @@ export default function ReadmeForm () {
         <div className="readme--container">
 
             <form onSubmit={handleSubmit}> 
+                <label>Project Title</label>
                 <input
                     type="text"
-                    placeholder="Project Title"
                     onChange={handleChange}
                     name="title"
                     value={formData.title}
                 />
+                <label>Description</label>
                 <textarea 
                     type="text"
-                    placeholder="Description"
                     onChange={handleChange}
                     name="description"
                     value={formData.description}
@@ -133,23 +133,23 @@ export default function ReadmeForm () {
                     name="includeTableofContents"
                     checked={formData.includeTableofContents}
                 />
+                <label>Installation</label>
                 <textarea 
                     type="text"
-                    placeholder="Installation"
                     onChange={handleChange}
                     name="installation"
                     value={formData.installation}
                 />
+                <label>Usage</label>
                 <textarea 
                     type="text"
-                    placeholder="Usage"
                     onChange={handleChange}
                     name="usage"
                     value={formData.usage}
                 />
+                <label>Credits</label>
                 <textarea 
                     type="text"
-                    placeholder="Credits"
                     onChange={handleChange}
                     name="credits"
                     value={formData.credits}
@@ -171,28 +171,28 @@ export default function ReadmeForm () {
                     
 
                 </select>
+                <label>Tests</label>
                 <textarea 
                     type="text"
-                    placeholder="Tests"
                     onChange={handleChange}
                     name="tests"
                     value={formData.tests}
                 />
+                <label>Email</label>
                 <input
                     type="email"
-                    placeholder="Email"
                     onChange={handleChange}
                     name="email"
                     value={formData.email}
                 />
+                <label>Github Username</label>
                 <input
                     type="text"
-                    placeholder="Github Username"
                     onChange={handleChange}
                     name="githubUsername"
                     value={formData.githubUsername}
                 />
-                <button>Create Readme</button>
+                <button className="readme--submit--btn">Create Readme</button>
             </form>
 
             <ReadmeMarkup />
