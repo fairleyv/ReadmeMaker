@@ -15,6 +15,7 @@ export default function ReadmeForm () {
             licenseLink:"",
             licenseBadge:"",
             tests:"",
+            contributions:"",
             githubUsername: "",
             email: ""
         } 
@@ -171,6 +172,13 @@ export default function ReadmeForm () {
                     
 
                 </select>
+                <label>Contributions</label>
+                <textarea 
+                    type="text"
+                    onChange={handleChange}
+                    name="contributions"
+                    value={formData.contributions}
+                />
                 <label>Tests</label>
                 <textarea 
                     type="text"
@@ -195,7 +203,7 @@ export default function ReadmeForm () {
                 <button className="readme--submit--btn">Create Readme</button>
             </form>
 
-            <ReadmeMarkup />
+            <ReadmeMarkup {...formData} />
         </div>
     )
 }
