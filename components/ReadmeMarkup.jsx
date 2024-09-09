@@ -52,15 +52,17 @@ export default function ReadmeMarkup (props) {
 
     return (
         <div className="readme--markup">
-            <div>
-                {formattedAboveTableofContentsArr}
-            </div>
-            <div>
-                {formattedTableofContentsArr}
-            </div>
-            
-            <div>
-                {formattedBelowTableofContentsArr}
+            <h2>Readme Markup</h2>
+            <div className={props.generatedMarkupChanged ? "markup-changed" : ""}>
+                <div>
+                    {formattedAboveTableofContentsArr}
+                </div>
+                <div>
+                    {formattedTableofContentsArr}
+                </div>
+                <div>
+                    {formattedBelowTableofContentsArr}
+                </div>
             </div>
         </div>
     )

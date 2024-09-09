@@ -17,7 +17,8 @@ export default function ReadmeForm () {
             tests:"",
             contributions:"",
             githubUsername: "",
-            email: ""
+            email: "",
+            generatedMarkupChanged: false
         } 
     )
 
@@ -26,15 +27,21 @@ export default function ReadmeForm () {
         const {name, value, type, checked} = event.target
         setFormData(prevFormData => ({
             ...prevFormData,
-            [name]: type === "checkbox" ? checked : value
+            [name]: type === "checkbox" ? checked : value,
+            generatedMarkupChanged: true
         }))
+        console.log(formData.generatedMarkupChanged)
     }
 
     function handleSubmit (event) {
         event.preventDefault()
         renderLicenseBadge()
         renderLicenseLink()
-        console.log(formData)
+        setFormData(prevFormData => ({
+            ...prevFormData,
+            generatedMarkupChanged: false
+        }))
+        console.log(formData.generatedMarkupChanged)
     }
 
 
