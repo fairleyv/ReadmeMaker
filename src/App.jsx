@@ -1,6 +1,6 @@
 import './App.css'
 import Navbar from "../components/Navbar"
-import HowtoUse from "../components/HowtoUse"
+import HowtoUse from "../components/Howtouse"
 import ReadmeForm from "../components/Readmeform"
 import DownloadButton from "../components/DownloadButton"
 import Footer from "../components/Footer"
