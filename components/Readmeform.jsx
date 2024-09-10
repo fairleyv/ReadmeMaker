@@ -18,7 +18,7 @@ export default function ReadmeForm () {
             contributions:"",
             githubUsername: "",
             email: "",
-            generatedMarkupChanged: false
+            generatedMarkupUnchanged: false
         } 
     )
 
@@ -28,9 +28,9 @@ export default function ReadmeForm () {
         setFormData(prevFormData => ({
             ...prevFormData,
             [name]: type === "checkbox" ? checked : value,
-            generatedMarkupChanged: true
+            generatedMarkupUnchanged: false
         }))
-        console.log(formData.generatedMarkupChanged)
+        console.log(formData.generatedMarkupUnchanged)
     }
 
     function handleSubmit (event) {
@@ -39,9 +39,9 @@ export default function ReadmeForm () {
         renderLicenseLink()
         setFormData(prevFormData => ({
             ...prevFormData,
-            generatedMarkupChanged: false
+            generatedMarkupUnchanged: true
         }))
-        console.log(formData.generatedMarkupChanged)
+        console.log(formData.generatedMarkupUnchanged)
     }
 
 

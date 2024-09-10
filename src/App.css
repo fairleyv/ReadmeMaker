@@ -99,6 +99,10 @@ text-shadow: #f5f5f5;
     display: none
 }
 
+.description {
+    text-indent: 1em;
+}
+
 @media only screen and (max-width: 768px) {
     .navbar--menu {
         position: fixed;
