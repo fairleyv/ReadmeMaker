@@ -1,8 +1,38 @@
-# React + Vite
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+# ReadmeMaker
+## Description
+    A web application created to ease the difficulty for creating README files by providing a form that takes a list of items you should include in your Readme, allowing you to fill in the information, and then organizing it into an easy cut and pace style.
+## Table of Contents
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[Description](#description)
 
-Currently, two official plugins are available:
+[Installation](#installation)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[Usage](#usage)
+
+[Credits](#credits)
+
+[License](#license)
+
+[Contributions](#contributions)
+
+[Tests](#tests)
+
+[Questions](#questions)
+
+## installation
+No need to install
+##usage
+First navigate to the site, fill out the form detailing the information you want to include in your Readme, and then click the "Create Readme" button to generate the formatted markup
+## Credits
+N/A
+## License
+This project is covered under the Apache_2.0
+## Contributions
+N/A
+## Tests
+N/A
+## Questions
+For any questions regarding this project please contact me at my -
+GitHub: [fairleyv](https://github.com/fairleyv)
+Email: Fairleyvincent@gmail.com

@@ -15,8 +15,10 @@ export default function ReadmeForm () {
             licenseLink:"",
             licenseBadge:"",
             tests:"",
+            contributions:"",
             githubUsername: "",
-            email: ""
+            email: "",
+            generatedMarkupUnchanged: false
         } 
     )
 
@@ -25,15 +27,21 @@ export default function ReadmeForm () {
         const {name, value, type, checked} = event.target
         setFormData(prevFormData => ({
             ...prevFormData,
-            [name]: type === "checkbox" ? checked : value
+            [name]: type === "checkbox" ? checked : value,
+            generatedMarkupUnchanged: false
         }))
+        console.log(formData.generatedMarkupUnchanged)
     }
 
     function handleSubmit (event) {
         event.preventDefault()
         renderLicenseBadge()
         renderLicenseLink()
-        console.log(formData)
+        setFormData(prevFormData => ({
+            ...prevFormData,
+            generatedMarkupUnchanged: true
+        }))
+        console.log(formData.generatedMarkupUnchanged)
     }
 
 
@@ -171,6 +179,13 @@ export default function ReadmeForm () {
                     
 
                 </select>
+                <label>Contributions</label>
+                <textarea 
+                    type="text"
+                    onChange={handleChange}
+                    name="contributions"
+                    value={formData.contributions}
+                />
                 <label>Tests</label>
                 <textarea 
                     type="text"
@@ -195,7 +210,7 @@ export default function ReadmeForm () {
                 <button className="readme--submit--btn">Create Readme</button>
             </form>
 
-            <ReadmeMarkup />
+            <ReadmeMarkup {...formData} />
         </div>
     )
 }

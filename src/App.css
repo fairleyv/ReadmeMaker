@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #4b4949;
+    background-color: #22333B;
     color: #f5f5f5;
     padding: 1rem 1.5rem;
 }
@@ -65,7 +65,7 @@ form {
     gap: 1rem 20%;
     grid-template-columns: 40% 40%;
     border: solid black 1px;
-    background-color: #f5f5f5;
+    background-color: #889696;
     margin: 2rem 3rem;
     padding: 2rem 4rem;
     width: 45vw;
@@ -78,7 +78,8 @@ label {
 
 .readme--markup {
     border: solid black 1px;
-    background-color: #f5f5f5;
+    background-color: #889696;
+    color: #fff;
     margin: 2rem 3rem;
     width: 45vw;
 
@@ -87,12 +88,24 @@ label {
 
 .readme--submit--btn {
 grid-column: 1 / -1;
-background-color: #4b4949;
+background-color: #22333B;
 color: #fff;
 font-size: 2rem;
 font-weight: 800;
 text-shadow: #f5f5f5;
 }       
+
+.markup-changed {
+    display: none
+}
+
+.description {
+    text-indent: 1em;
+}
+
+.readme--markup--title {
+    text-align: center;
+}
 
 @media only screen and (max-width: 768px) {
     .navbar--menu {
@@ -144,7 +157,6 @@ text-shadow: #f5f5f5;
 
     .readme--container {
         display:block;
-        text-align: center;
     }
 
     form {
