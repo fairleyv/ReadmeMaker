@@ -31,7 +31,7 @@ const activeClass = isActive ? "active" : ""
                     <a href="#readme--component" className="navbar--link" onClick={closeMenu}>Readme Maker</a>
                 </li>
                 <li className="navbar--item">
-                    <a href="#download--btn--component" className="navbar--link" onClick={closeMenu}>Download Button</a>
+                    <a className="navbar--link disabled--link" onClick={closeMenu}>Download Button</a>
                 </li>
                 <li className="navbar--item">
                     <a href="#footer--component" className="navbar--link" onClick={closeMenu}>Footer</a>
