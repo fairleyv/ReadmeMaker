@@ -49,6 +49,22 @@
     background: transparent;
 }
 
+.howtouse--section {
+    margin: 1em 2em;
+
+}
+.howtouse--section--header {
+    margin: 1.25em 0;
+    font-size: 2.5em;
+    text-decoration: underline;
+}
+
+.howtouse--section--paragraph {
+    margin: 1em 0;
+    font-size: 1.3em;
+
+}
+
 .hamburger {
     display: none;
 }
@@ -66,6 +82,20 @@
 .readme--container {
     display: flex;
     justify-content: space-between;
+}
+
+.readme--section--header {
+    margin: 1.25em .9em;
+    font-size: 2.5em;
+    text-decoration: underline;
+}
+
+.readme--form--header {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 2em;
+    color: #fff;
+
 }
 
 form {
@@ -113,6 +143,7 @@ text-shadow: #f5f5f5;
 
 .readme--markup--title {
     text-align: center;
+    font-size: 2em;
 }
 
 @media only screen and (max-width: 768px) {
