@@ -116,101 +116,106 @@ export default function ReadmeForm () {
 
 
     return (
-        <div className="readme--container">
+        <div>
+            <h2 className="readme--section--header">
+                Readme Maker
+            </h2>
+            <div className="readme--container">
+                <form onSubmit={handleSubmit}> 
+                <h3 className="readme--form--header">Readme Form</h3>
+                    <label>Project Title</label>
+                    <input
+                        type="text"
+                        onChange={handleChange}
+                        name="title"
+                        value={formData.title}
+                    />
+                    <label>Description</label>
+                    <textarea 
+                        type="text"
+                        onChange={handleChange}
+                        name="description"
+                        value={formData.description}
+                    />
+                    <label htmlFor="tableOfContents">Include a Table of Contents?</label>
+                    <input 
+                        type="checkbox"
+                        id="tableOfContents"
+                        onChange={handleChange}
+                        name="includeTableofContents"
+                        checked={formData.includeTableofContents}
+                    />
+                    <label>Installation</label>
+                    <textarea 
+                        type="text"
+                        onChange={handleChange}
+                        name="installation"
+                        value={formData.installation}
+                    />
+                    <label>Usage</label>
+                    <textarea 
+                        type="text"
+                        onChange={handleChange}
+                        name="usage"
+                        value={formData.usage}
+                    />
+                    <label>Credits</label>
+                    <textarea 
+                        type="text"
+                        onChange={handleChange}
+                        name="credits"
+                        value={formData.credits}
+                    />
+                    <label htmlFor="license">What license would you Like?</label>
+                    <select id="license"
+                        onChange={handleChange}
+                        name="license"
+                        value={formData.license}
+                    >
+                        <option value="N/A">N/A</option>
+                        <option value="Apache_2.0">Apache_2.0</option>
+                        <option value="BSD_3--Clause">BSD_3--Clause</option>
+                        <option value="GPLv3">GPLv3</option>
+                        <option value="GPL_v2">GPL_v2</option>
+                        <option value="IPL_1.0">IPL_1.0</option>
+                        <option value="ISC">ISC</option>
+                        <option value="MIT">MIT</option>
+                        
 
-            <form onSubmit={handleSubmit}> 
-                <label>Project Title</label>
-                <input
-                    type="text"
-                    onChange={handleChange}
-                    name="title"
-                    value={formData.title}
-                />
-                <label>Description</label>
-                <textarea 
-                    type="text"
-                    onChange={handleChange}
-                    name="description"
-                    value={formData.description}
-                />
-                <label htmlFor="tableOfContents">Include a Table of Contents?</label>
-                <input 
-                    type="checkbox"
-                    id="tableOfContents"
-                    onChange={handleChange}
-                    name="includeTableofContents"
-                    checked={formData.includeTableofContents}
-                />
-                <label>Installation</label>
-                <textarea 
-                    type="text"
-                    onChange={handleChange}
-                    name="installation"
-                    value={formData.installation}
-                />
-                <label>Usage</label>
-                <textarea 
-                    type="text"
-                    onChange={handleChange}
-                    name="usage"
-                    value={formData.usage}
-                />
-                <label>Credits</label>
-                <textarea 
-                    type="text"
-                    onChange={handleChange}
-                    name="credits"
-                    value={formData.credits}
-                />
-                <label htmlFor="license">What license would you Like?</label>
-                <select id="license"
-                    onChange={handleChange}
-                    name="license"
-                    value={formData.license}
-                >
-                    <option value="N/A">N/A</option>
-                    <option value="Apache_2.0">Apache_2.0</option>
-                    <option value="BSD_3--Clause">BSD_3--Clause</option>
-                    <option value="GPLv3">GPLv3</option>
-                    <option value="GPL_v2">GPL_v2</option>
-                    <option value="IPL_1.0">IPL_1.0</option>
-                    <option value="ISC">ISC</option>
-                    <option value="MIT">MIT</option>
-                    
+                    </select>
+                    <label>Contributions</label>
+                    <textarea 
+                        type="text"
+                        onChange={handleChange}
+                        name="contributions"
+                        value={formData.contributions}
+                    />
+                    <label>Tests</label>
+                    <textarea 
+                        type="text"
+                        onChange={handleChange}
+                        name="tests"
+                        value={formData.tests}
+                    />
+                    <label>Email</label>
+                    <input
+                        type="email"
+                        onChange={handleChange}
+                        name="email"
+                        value={formData.email}
+                    />
+                    <label>Github Username</label>
+                    <input
+                        type="text"
+                        onChange={handleChange}
+                        name="githubUsername"
+                        value={formData.githubUsername}
+                    />
+                    <button className="readme--submit--btn">Create Readme</button>
+                </form>
 
-                </select>
-                <label>Contributions</label>
-                <textarea 
-                    type="text"
-                    onChange={handleChange}
-                    name="contributions"
-                    value={formData.contributions}
-                />
-                <label>Tests</label>
-                <textarea 
-                    type="text"
-                    onChange={handleChange}
-                    name="tests"
-                    value={formData.tests}
-                />
-                <label>Email</label>
-                <input
-                    type="email"
-                    onChange={handleChange}
-                    name="email"
-                    value={formData.email}
-                />
-                <label>Github Username</label>
-                <input
-                    type="text"
-                    onChange={handleChange}
-                    name="githubUsername"
-                    value={formData.githubUsername}
-                />
-                <button className="readme--submit--btn">Create Readme</button>
-            </form>
-
-            <ReadmeMarkup {...formData} />
+                <ReadmeMarkup {...formData} />
+            </div>
         </div>
     )
 }
