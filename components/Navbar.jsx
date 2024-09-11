@@ -25,16 +25,16 @@ const activeClass = isActive ? "active" : ""
 
         <ul className={`navbar--menu ${activeClass}`}>
                 <li className="navbar--item">
-                    <a href="#" className="navbar--link" onClick={closeMenu}>How To Use</a>
+                    <a href="#howtouse--component" className="navbar--link" onClick={closeMenu}>How To Use</a>
                 </li>
                 <li className="navbar--item">
-                    <a href="#" className="navbar--link" onClick={closeMenu}>Readme Maker</a>
+                    <a href="#readme--component" className="navbar--link" onClick={closeMenu}>Readme Maker</a>
                 </li>
                 <li className="navbar--item">
-                    <a href="#" className="navbar--link" onClick={closeMenu}>Download Button</a>
+                    <a className="navbar--link disabled--link" onClick={closeMenu}>Download Button (coming soon)</a>
                 </li>
                 <li className="navbar--item">
-                    <a href="#" className="navbar--link" onClick={closeMenu}>Footer</a>
+                    <a href="#footer--component" className="navbar--link" onClick={closeMenu}>Footer</a>
                 </li>
             </ul>
         <div className={`hamburger ${activeClass}`} onClick={mobileMenu}>
