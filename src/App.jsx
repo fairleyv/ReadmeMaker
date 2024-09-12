@@ -9,8 +9,8 @@ function App() {
     return (
     <>
         <Navbar />
-        <HowtoUse id="howtouse--component"/>
-        <ReadmeForm id="readme--component"/>
+        <HowtoUse />
+        <ReadmeForm />
         <DownloadButton id="download--btn--component"/>
         <Footer id="footer--component"/>
     </>

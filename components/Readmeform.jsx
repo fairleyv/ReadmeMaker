@@ -117,7 +117,7 @@ export default function ReadmeForm () {
 
     return (
         <div>
-            <h2 className="readme--section--header">
+            <h2 className="readme--section--header" id="readme--component">
                 Readme Maker
             </h2>
             <div className="readme--container">
