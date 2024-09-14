@@ -21,8 +21,9 @@
 [Questions](#questions)
 
 ## installation
-No need to install
-##usage
+No need to install! You can visit the site [here](https://readmemaker.onrender.com).
+
+## Usage
 First navigate to the site, fill out the form detailing the information you want to include in your Readme, and then click the "Create Readme" button to generate the formatted markup
 ## Credits
 N/A
