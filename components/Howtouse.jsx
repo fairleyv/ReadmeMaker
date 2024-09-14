@@ -2,7 +2,7 @@ import React from "react"
 import {useState} from "react"
 
 export default function HowtoUse () {
-    return (<div className="howtouse--section">
+    return (<div className="howtouse--section" id="howtouse--component">
         <h2 className="howtouse--section--header">
             How To Use
         </h2>

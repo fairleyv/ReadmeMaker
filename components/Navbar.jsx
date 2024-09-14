@@ -1,5 +1,5 @@
 import React from "react"
-import logo from "../src/assets/readmeMakerLogo.jpg"
+import logo from "../src/assets/book.png"
 import {useState} from "react"
 
 export default function Navbar () {
