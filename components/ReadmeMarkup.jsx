@@ -26,9 +26,9 @@ export default function ReadmeMarkup (props) {
     ]
 
     const belowTableofContentsArr = [
-        "## installation",
+        "## Installation",
         `${props.installation}`,
-        "##usage", 
+        "## Usage", 
         `${props.usage}`,
         "## Credits ",
         `${props.credits} `,
